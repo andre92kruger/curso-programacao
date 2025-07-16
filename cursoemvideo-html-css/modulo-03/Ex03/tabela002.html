@@ -12,6 +12,7 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
 
         td, th {
@@ -19,20 +20,43 @@
             padding: 10px;
         }
 
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: aquamarine;
+        }
+
         thead, tfoot {
             background-color: bisque;
             color: blueviolet;
         }
 
+        thead > tr > th {
+            position: sticky;
+            top: -1px;
+            background-color: bisque;
+        }
+
         td.num {
             text-align: right;
         }
+
+        tbody tr:nth-child(odd) { /* 2n-1 */
+            background-color: beige;
+        }
+
+        tbody tr:nth-child(even) { /* 2n */
+            background-color: aqua;
+        }
+
     </style>
 </head>
 <body>
     <h1>Uso de tabelas complexas</h1>
     <!--ANATOMIA PARA TABELAS COMPLEXAS
     TABLE
+        CAPTION (LEGENDA)
         THEAD
             TR, TD, TH
         TBODY
@@ -42,10 +66,11 @@
     -->
 
     <table>
+        <caption>População das unidades federativas.</caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
         <tbody>
@@ -160,11 +185,18 @@
         </tbody>
         <tfoot>
             <tr>
-                <th>Total de Habitantes</th>
+                <th scope="row">Total de Habitantes</th>
                 <td><strong>212 583 750</strong></td>
             </tr>
         </tfoot>
     </table>
-
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perferendis adipisci autem perspiciatis. Vitae, tempora pariatur, voluptas distinctio repellat quae vero expedita doloremque deleniti soluta error quaerat neque nesciunt consequatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aliquid deleniti, assumenda, pariatur voluptas facere, eligendi distinctio soluta vero veritatis impedit modi expedita a! Ab repellendus asperiores esse iusto enim!Lorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim natus accusamus rem tenetur, labore, perferendis nihil dolorem blanditiis doloremque, unde eveniet? Explicabo, voluptatem? Sunt tenetur adipisci eaque, iure laboriosam odio.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perferendis adipisci autem perspiciatis. Vitae, tempora pariatur, voluptas distinctio repellat quae vero expedita doloremque deleniti soluta error quaerat neque nesciunt consequatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aliquid deleniti, assumenda, pariatur voluptas facere, eligendi distinctio soluta vero veritatis impedit modi expedita a! Ab repellendus asperiores esse iusto enim!Lorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim natus accusamus rem tenetur, labore, perferendis nihil dolorem blanditiis doloremque, unde eveniet? Explicabo, voluptatem? Sunt tenetur adipisci eaque, iure laboriosam odio.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perferendis adipisci autem perspiciatis. Vitae, tempora pariatur, voluptas distinctio repellat quae vero expedita doloremque deleniti soluta error quaerat neque nesciunt consequatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aliquid deleniti, assumenda, pariatur voluptas facere, eligendi distinctio soluta vero veritatis impedit modi expedita a! Ab repellendus asperiores esse iusto enim!Lorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim natus accusamus rem tenetur, labore, perferendis nihil dolorem blanditiis doloremque, unde eveniet? Explicabo, voluptatem? Sunt tenetur adipisci eaque, iure laboriosam odio.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perferendis adipisci autem perspiciatis. Vitae, tempora pariatur, voluptas distinctio repellat quae vero expedita doloremque deleniti soluta error quaerat neque nesciunt consequatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aliquid deleniti, assumenda, pariatur voluptas facere, eligendi distinctio soluta vero veritatis impedit modi expedita a! Ab repellendus asperiores esse iusto enim!Lorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim natus accusamus rem tenetur, labore, perferendis nihil dolorem blanditiis doloremque, unde eveniet? Explicabo, voluptatem? Sunt tenetur adipisci eaque, iure laboriosam odio.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perferendis adipisci autem perspiciatis. Vitae, tempora pariatur, voluptas distinctio repellat quae vero expedita doloremque deleniti soluta error quaerat neque nesciunt consequatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aliquid deleniti, assumenda, pariatur voluptas facere, eligendi distinctio soluta vero veritatis impedit modi expedita a! Ab repellendus asperiores esse iusto enim!Lorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim natus accusamus rem tenetur, labore, perferendis nihil dolorem blanditiis doloremque, unde eveniet? Explicabo, voluptatem? Sunt tenetur adipisci eaque, iure laboriosam odio.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perferendis adipisci autem perspiciatis. Vitae, tempora pariatur, voluptas distinctio repellat quae vero expedita doloremque deleniti soluta error quaerat neque nesciunt consequatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aliquid deleniti, assumenda, pariatur voluptas facere, eligendi distinctio soluta vero veritatis impedit modi expedita a! Ab repellendus asperiores esse iusto enim!Lorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim natus accusamus rem tenetur, labore, perferendis nihil dolorem blanditiis doloremque, unde eveniet? Explicabo, voluptatem? Sunt tenetur adipisci eaque, iure laboriosam odio.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perferendis adipisci autem perspiciatis. Vitae, tempora pariatur, voluptas distinctio repellat quae vero expedita doloremque deleniti soluta error quaerat neque nesciunt consequatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aliquid deleniti, assumenda, pariatur voluptas facere, eligendi distinctio soluta vero veritatis impedit modi expedita a! Ab repellendus asperiores esse iusto enim!Lorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim natus accusamus rem tenetur, labore, perferendis nihil dolorem blanditiis doloremque, unde eveniet? Explicabo, voluptatem? Sunt tenetur adipisci eaque, iure laboriosam odio.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero perferendis adipisci autem perspiciatis. Vitae, tempora pariatur, voluptas distinctio repellat quae vero expedita doloremque deleniti soluta error quaerat neque nesciunt consequatur?Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum aliquid deleniti, assumenda, pariatur voluptas facere, eligendi distinctio soluta vero veritatis impedit modi expedita a! Ab repellendus asperiores esse iusto enim!Lorem Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim natus accusamus rem tenetur, labore, perferendis nihil dolorem blanditiis doloremque, unde eveniet? Explicabo, voluptatem? Sunt tenetur adipisci eaque, iure laboriosam odio.</p>
 </body>
 </html>
